@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a ToRec install, recording, update, or playback problem.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за фидбек. Заполни коротко: что случилось, где был созвон, ОС и версия ToRec.
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: macOS or Windows
+      placeholder: macOS / Windows
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ToRec version
+      placeholder: v0.1.6 / v0.2.4-beta
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS version and device
+      placeholder: macOS 15.x MacBook M4 / Windows 11 laptop
+    validations:
+      required: true
+  - type: input
+    id: call-app
+    attributes:
+      label: Call app
+      placeholder: Zoom / Google Meet / KTalk / Teams / Telegram / Discord
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do and what broke?
+      placeholder: Запустил ToRec, вошел в Zoom, запись не стартовала / попросило права повторно / нет системного звука...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: Ожидал, что запись стартует автоматически и остановится после созвона.
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots/logs
+      description: Attach a screenshot. If possible, copy logs from Diagnostics.
